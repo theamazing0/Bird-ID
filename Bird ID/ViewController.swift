@@ -69,6 +69,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         present(pickerController, animated: true, completion: nil)
     }
     
+    @IBAction func takePhoto(_ sender: Any) {
+        pickerController.sourceType = .camera
+        present(pickerController, animated: true, completion: nil)
+    }
     @IBAction func seePercentages(_ sender: Any) {
     }
     
