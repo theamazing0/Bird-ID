@@ -180,7 +180,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Info" id="DpC-Ik-xrw"/>
                     <connections>
-                        <outlet property="label" destination="ftN-uT-siX" id="43z-kG-H9C"/>
+                        <outlet property="label" destination="ftN-uT-siX" id="1EA-Eb-VIY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPJ-rK-hbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
