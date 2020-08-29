@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-    @IBOutlet var percentagesLook: UIButton!
     @IBOutlet var imageView: UIImageView!
     var pickerController = UIImagePickerController()
     @IBOutlet var decriptionLabel: UILabel!
@@ -61,7 +60,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
                 output = "Error"
             }
             decriptionLabel.text = output
-            percentagesLook.setTitle("Check Percentages", for: .normal)
         }
         
         picker.dismiss(animated: true, completion: nil)

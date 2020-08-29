@@ -55,9 +55,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djw-Td-XxN">
                                 <rect key="frame" x="20" y="614" width="374" height="49"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="31"/>
+                                <state key="normal" title="Check Percentages"/>
                                 <connections>
-                                    <action selector="OpenFile:" destination="4J9-WW-lcI" eventType="touchUpInside" id="ejJ-eY-qwe"/>
-                                    <action selector="seePercentages:" destination="4J9-WW-lcI" eventType="touchUpInside" id="gLn-gf-8rr"/>
+                                    <action selector="seePercentages:" destination="4J9-WW-lcI" eventType="touchUpInside" id="ACG-xc-GKN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,7 +94,7 @@
                             </barButtonItem>
                             <barButtonItem image="folder" catalog="system" id="JKY-9h-HEV">
                                 <connections>
-                                    <action selector="OpenFile:" destination="4J9-WW-lcI" id="i7L-oQ-I7g"/>
+                                    <action selector="OpenFile:" destination="4J9-WW-lcI" id="nrA-sY-DUV"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -102,7 +102,6 @@
                     <connections>
                         <outlet property="decriptionLabel" destination="Bxy-UC-ABG" id="Ovw-ay-7yl"/>
                         <outlet property="imageView" destination="0LJ-77-qc9" id="c4B-ox-Bdj"/>
-                        <outlet property="percentagesLook" destination="djw-Td-XxN" id="nrx-iY-dcX"/>
                         <segue destination="SK2-eW-B4E" kind="show" identifier="mainToPerc" id="g7y-5E-q3s"/>
                         <segue destination="6CB-Ww-ITv" kind="show" identifier="mainToScroll" id="ipB-qW-hxb"/>
                     </connections>
