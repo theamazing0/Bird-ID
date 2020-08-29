@@ -74,6 +74,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         present(pickerController, animated: true, completion: nil)
     }
     @IBAction func seePercentages(_ sender: Any) {
+        performSegue(withIdentifier: "mainToPerc", sender: percentages)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let DesVC = segue.destination as! PercTableViewController
+        let myPercentages = sender as! Dictionary<String,Double>
+        DesVC.percentages = myPercentages
     }
     
 }
