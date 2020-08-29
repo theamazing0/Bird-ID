@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     let model = BackyardBirdImageClassifier_1()
     var output = ""
     var percentages: [String: Double] = [:]
+    var goingOutKind = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,13 +75,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         present(pickerController, animated: true, completion: nil)
     }
     @IBAction func seePercentages(_ sender: Any) {
+        goingOutKind = "P"
         performSegue(withIdentifier: "mainToPerc", sender: percentages)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let DesVC = segue.destination as! PercTableViewController
-        let myPercentages = sender as! Dictionary<String,Double>
-        DesVC.percentages = myPercentages
+    
+    
+    @IBAction func infoWanted(_ sender: Any) {
+        goingOutKind = "I"
+        performSegue(withIdentifier: "mainToScroll", sender: output)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if goingOutKind == "P"{
+            let DesVC = segue.destination as! PercTableViewController
+            let myPercentages = sender as! Dictionary<String,Double>
+            DesVC.percentages = myPercentages
+        }
+        if goingOutKind == "I"{
+            let DesVC = segue.destination as! ScrollViewController
+            let myBird = sender as! String
+            DesVC.myBird = myBird
+        }
+    }
 }
 

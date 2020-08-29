@@ -81,7 +81,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Bird ID" id="rle-LG-Zwp">
                         <barButtonItem key="backBarButtonItem" title="Back" id="mGY-P1-FRt"/>
-                        <barButtonItem key="leftBarButtonItem" image="info.circle" catalog="system" id="qF6-6U-lG8"/>
+                        <barButtonItem key="leftBarButtonItem" image="info.circle" catalog="system" id="qF6-6U-lG8">
+                            <connections>
+                                <action selector="infoWanted:" destination="4J9-WW-lcI" id="G0S-yb-qzM"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="camera" catalog="system" id="6a8-DF-NqM">
                                 <connections>
@@ -99,6 +103,7 @@
                         <outlet property="decriptionLabel" destination="Bxy-UC-ABG" id="Ovw-ay-7yl"/>
                         <outlet property="imageView" destination="0LJ-77-qc9" id="c4B-ox-Bdj"/>
                         <segue destination="SK2-eW-B4E" kind="show" identifier="mainToPerc" id="g7y-5E-q3s"/>
+                        <segue destination="6CB-Ww-ITv" kind="show" identifier="mainToScroll" id="ipB-qW-hxb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adk-Hm-561" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -133,6 +138,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgB-ym-4Iu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1492" y="-105"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="vFA-xF-QeB">
+            <objects>
+                <viewController id="6CB-Ww-ITv" customClass="ScrollViewController" customModule="Bird_ID" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6SY-CQ-imh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOn-0F-doM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select an Image To Learn More About it!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100000" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="ftN-uT-siX">
+                                        <rect key="frame" x="20" y="17" width="374" height="774"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94291305540000003" green="0.93221193550000003" blue="0.82518917319999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ftN-uT-siX" secondAttribute="trailing" constant="20" id="4nX-Cq-eiU"/>
+                                    <constraint firstAttribute="bottom" secondItem="ftN-uT-siX" secondAttribute="bottom" constant="105" id="5Nh-gw-na6"/>
+                                    <constraint firstItem="ftN-uT-siX" firstAttribute="top" secondItem="bOn-0F-doM" secondAttribute="top" constant="17" id="R03-Q0-nzl"/>
+                                    <constraint firstItem="ftN-uT-siX" firstAttribute="width" secondItem="bOn-0F-doM" secondAttribute="width" constant="-40" id="Zx5-iB-G8P"/>
+                                    <constraint firstItem="ftN-uT-siX" firstAttribute="leading" secondItem="bOn-0F-doM" secondAttribute="leading" constant="20" id="keh-rM-pAo"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="sN6-zz-xHR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="sI3-yo-xN2"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bOn-0F-doM" firstAttribute="width" secondItem="6SY-CQ-imh" secondAttribute="width" id="MqE-CN-5CY"/>
+                            <constraint firstItem="bOn-0F-doM" firstAttribute="top" secondItem="1OD-E3-LYw" secondAttribute="top" id="UDi-rs-F7D"/>
+                            <constraint firstItem="bOn-0F-doM" firstAttribute="height" secondItem="6SY-CQ-imh" secondAttribute="height" id="ce9-kb-JT0"/>
+                            <constraint firstItem="bOn-0F-doM" firstAttribute="leading" secondItem="1OD-E3-LYw" secondAttribute="leading" id="mB8-cC-qt7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1OD-E3-LYw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info" id="DpC-Ik-xrw"/>
+                    <connections>
+                        <outlet property="label" destination="ftN-uT-siX" id="43z-kG-H9C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPJ-rK-hbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2307" y="-105"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.40395435490184051" green="0.35333922997730061" blue="0.089197297573006165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

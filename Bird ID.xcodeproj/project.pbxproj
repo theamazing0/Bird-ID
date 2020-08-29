@@ -16,6 +16,7 @@
 		2ECACED524FA97D500FCD6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ECACED324FA97D500FCD6AE /* LaunchScreen.storyboard */; };
 		2ECACEDD24FA99F600FCD6AE /* BackyardBirdImageClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2ECACEDC24FA99F600FCD6AE /* BackyardBirdImageClassifier 1.mlmodel */; };
 		2ECACEDF24FABAFF00FCD6AE /* PercTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECACEDE24FABAFF00FCD6AE /* PercTableViewController.swift */; };
+		2ECACEE324FAEBCF00FCD6AE /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECACEE224FAEBCF00FCD6AE /* ScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2ECACED624FA97D500FCD6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ECACEDC24FA99F600FCD6AE /* BackyardBirdImageClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "BackyardBirdImageClassifier 1.mlmodel"; sourceTree = "<group>"; };
 		2ECACEDE24FABAFF00FCD6AE /* PercTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercTableViewController.swift; sourceTree = "<group>"; };
+		2ECACEE224FAEBCF00FCD6AE /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				2ECACEC724FA97CF00FCD6AE /* SceneDelegate.swift */,
 				2ECACEC924FA97CF00FCD6AE /* ViewController.swift */,
 				2ECACEDE24FABAFF00FCD6AE /* PercTableViewController.swift */,
+				2ECACEE224FAEBCF00FCD6AE /* ScrollViewController.swift */,
 				2ECACECB24FA97CF00FCD6AE /* Main.storyboard */,
 				2ECACEDC24FA99F600FCD6AE /* BackyardBirdImageClassifier 1.mlmodel */,
 				2ECACED124FA97D500FCD6AE /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 				2ECACECA24FA97CF00FCD6AE /* ViewController.swift in Sources */,
 				2ECACED024FA97CF00FCD6AE /* Bird_ID.xcdatamodeld in Sources */,
 				2ECACEC624FA97CF00FCD6AE /* AppDelegate.swift in Sources */,
+				2ECACEE324FAEBCF00FCD6AE /* ScrollViewController.swift in Sources */,
 				2ECACEDF24FABAFF00FCD6AE /* PercTableViewController.swift in Sources */,
 				2ECACEC824FA97CF00FCD6AE /* SceneDelegate.swift in Sources */,
 				2ECACEDD24FA99F600FCD6AE /* BackyardBirdImageClassifier 1.mlmodel in Sources */,
