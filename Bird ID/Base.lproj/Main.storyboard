@@ -1,24 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J6j-kK-dmo">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="wbQ-vA-vmx">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="J6j-kK-dmo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KAf-3C-2mj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qqz-Iu-M5n">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="4J9-WW-lcI" kind="relationship" relationship="rootViewController" id="aNY-YG-lZN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Us-LP-ZOz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-226" y="-117"/>
+        </scene>
+        <!--Bird ID-->
+        <scene sceneID="wGX-Vf-kLU">
+            <objects>
+                <viewController id="4J9-WW-lcI" customClass="ViewController" customModule="Bird_ID" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="You-U6-7KY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a picture to learn it's kind" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bxy-UC-ABG">
+                                <rect key="frame" x="20" y="516" width="374" height="100.33333333333337"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="42"/>
+                                <color key="textColor" red="0.72970116139999996" green="0.34002143140000002" blue="0.16229966279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="0LJ-77-qc9">
+                                <rect key="frame" x="20" y="158" width="374" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="Y7f-ad-ZsE"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93812477589999999" green="0.92260450120000004" blue="0.80854946370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0LJ-77-qc9" firstAttribute="top" secondItem="OOJ-mQ-2hu" secondAttribute="top" constant="70" id="AWL-7d-tOl"/>
+                            <constraint firstItem="0LJ-77-qc9" firstAttribute="leading" secondItem="Bxy-UC-ABG" secondAttribute="leading" id="Dzo-xb-hmA"/>
+                            <constraint firstItem="0LJ-77-qc9" firstAttribute="leading" secondItem="OOJ-mQ-2hu" secondAttribute="leading" constant="20" id="JEl-Ng-yCL"/>
+                            <constraint firstItem="Bxy-UC-ABG" firstAttribute="top" secondItem="0LJ-77-qc9" secondAttribute="bottom" constant="8" id="aWQ-JJ-v7G"/>
+                            <constraint firstItem="Bxy-UC-ABG" firstAttribute="leading" secondItem="OOJ-mQ-2hu" secondAttribute="leading" constant="20" id="eJ7-ib-ezH"/>
+                            <constraint firstItem="OOJ-mQ-2hu" firstAttribute="trailing" secondItem="0LJ-77-qc9" secondAttribute="trailing" constant="20" id="owP-JS-9mA"/>
+                            <constraint firstItem="OOJ-mQ-2hu" firstAttribute="trailing" secondItem="Bxy-UC-ABG" secondAttribute="trailing" constant="20" id="v2d-Lg-ecm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OOJ-mQ-2hu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bird ID" id="rle-LG-Zwp">
+                        <barButtonItem key="leftBarButtonItem" image="table" catalog="system" id="HGh-gV-k3e">
+                            <connections>
+                                <action selector="seePercentages:" destination="4J9-WW-lcI" id="A3i-Za-xt7"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="camera" catalog="system" id="6a8-DF-NqM"/>
+                            <barButtonItem image="folder" catalog="system" id="JKY-9h-HEV">
+                                <connections>
+                                    <action selector="OpenFile:" destination="4J9-WW-lcI" id="i7L-oQ-I7g"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="decriptionLabel" destination="Bxy-UC-ABG" id="Ovw-ay-7yl"/>
+                        <outlet property="imageView" destination="0LJ-77-qc9" id="c4B-ox-Bdj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adk-Hm-561" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698.55072463768124" y="-108.48214285714285"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.40395435490184051" green="0.35333922997730061" blue="0.089197297573006165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="Image-removebg-preview" width="170" height="173"/>
+        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="folder" catalog="system" width="128" height="95"/>
+        <image name="table" catalog="system" width="128" height="93"/>
+    </resources>
 </document>
