@@ -52,32 +52,36 @@
                                 <color key="textColor" red="0.18268957729999999" green="0.2096105218" blue="0.1962749064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djw-Td-XxN">
+                                <rect key="frame" x="20" y="614" width="374" height="49"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="31"/>
+                                <state key="normal" title="Check Accuracy"/>
+                                <connections>
+                                    <action selector="seePercentages:" destination="4J9-WW-lcI" eventType="touchUpInside" id="gLn-gf-8rr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93812477589999999" green="0.92260450120000004" blue="0.80854946370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OOJ-mQ-2hu" firstAttribute="bottom" secondItem="ygM-J2-TMP" secondAttribute="bottom" id="1bN-Ay-RI6"/>
+                            <constraint firstItem="OOJ-mQ-2hu" firstAttribute="trailing" secondItem="djw-Td-XxN" secondAttribute="trailing" constant="20" id="3kn-ew-8zG"/>
                             <constraint firstItem="0LJ-77-qc9" firstAttribute="top" secondItem="OOJ-mQ-2hu" secondAttribute="top" constant="60" id="AWL-7d-tOl"/>
                             <constraint firstItem="0LJ-77-qc9" firstAttribute="leading" secondItem="Bxy-UC-ABG" secondAttribute="leading" id="Dzo-xb-hmA"/>
                             <constraint firstItem="0LJ-77-qc9" firstAttribute="leading" secondItem="OOJ-mQ-2hu" secondAttribute="leading" constant="20" id="JEl-Ng-yCL"/>
                             <constraint firstItem="ygM-J2-TMP" firstAttribute="leading" secondItem="OOJ-mQ-2hu" secondAttribute="leading" constant="20" id="ZYj-pQ-Yav"/>
                             <constraint firstItem="OOJ-mQ-2hu" firstAttribute="trailing" secondItem="ygM-J2-TMP" secondAttribute="trailing" constant="20" id="a7F-nQ-KCl"/>
                             <constraint firstItem="Bxy-UC-ABG" firstAttribute="top" secondItem="0LJ-77-qc9" secondAttribute="bottom" constant="8" id="aWQ-JJ-v7G"/>
+                            <constraint firstItem="djw-Td-XxN" firstAttribute="top" secondItem="Bxy-UC-ABG" secondAttribute="bottom" constant="7.6666666666667425" id="doE-fM-JCk"/>
                             <constraint firstItem="Bxy-UC-ABG" firstAttribute="leading" secondItem="OOJ-mQ-2hu" secondAttribute="leading" constant="20" id="eJ7-ib-ezH"/>
                             <constraint firstItem="OOJ-mQ-2hu" firstAttribute="trailing" secondItem="0LJ-77-qc9" secondAttribute="trailing" constant="20" id="owP-JS-9mA"/>
+                            <constraint firstItem="djw-Td-XxN" firstAttribute="leading" secondItem="OOJ-mQ-2hu" secondAttribute="leading" constant="20" id="uuH-gb-2nZ"/>
                             <constraint firstItem="OOJ-mQ-2hu" firstAttribute="trailing" secondItem="Bxy-UC-ABG" secondAttribute="trailing" constant="20" id="v2d-Lg-ecm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OOJ-mQ-2hu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Bird ID" id="rle-LG-Zwp">
                         <barButtonItem key="backBarButtonItem" title="Back" id="mGY-P1-FRt"/>
-                        <leftBarButtonItems>
-                            <barButtonItem image="info.circle" catalog="system" id="qF6-6U-lG8"/>
-                            <barButtonItem image="percent" catalog="system" id="HGh-gV-k3e">
-                                <connections>
-                                    <action selector="seePercentages:" destination="4J9-WW-lcI" id="A3i-Za-xt7"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" image="info.circle" catalog="system" id="qF6-6U-lG8"/>
                         <rightBarButtonItems>
                             <barButtonItem image="camera" catalog="system" id="6a8-DF-NqM">
                                 <connections>
@@ -137,6 +141,5 @@
         <image name="folder" catalog="system" width="128" height="95"/>
         <image name="images_4-removebg-preview" width="225" height="225"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="percent" catalog="system" width="128" height="118"/>
     </resources>
 </document>

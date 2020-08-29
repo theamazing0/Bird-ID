@@ -12,21 +12,27 @@ class PercTableViewController: UITableViewController {
     
     var percentages: [String: Double] = [:]
     var percArray : [String] = []
-    var smallDecimal: Double = 0
+    var smallDecimal = ""
     var currentPercentage: Double = 0
+    var doubleDecimal : Double = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for (bird, perc) in percentages{
+        var orderedPerc = percentages.sorted(by:{
+            $0.value > $1.value
+        })
+        
+        for (bird, perc) in orderedPerc{
             print("\(bird) : \(perc)")
-            smallDecimal = round(1000.0 * perc) / 1000.0
-            currentPercentage = smallDecimal * 100
+            smallDecimal = String(format: "%.2f", perc)
+            doubleDecimal = Double(smallDecimal)!
+            currentPercentage = doubleDecimal * 100
             if currentPercentage != 0.0 {
                 percArray.append("\(bird) : \(currentPercentage)%")
             }
-            
         }
+        
         print("PercArray:")
         print(percArray)
 
